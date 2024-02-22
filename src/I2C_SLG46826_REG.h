@@ -1,6 +1,10 @@
 #ifndef __I2C_SLG46826_REG_H__
 #define __I2C_SLG46826_REG_H__
 
+#ifndef __cplusplus
+  #include <stdint.h>
+#endif
+
 typedef struct {
   union {
     struct {
@@ -1336,6 +1340,8 @@ typedef struct {
   };
 } slg_register_t;
 
+#ifdef __cplusplus
+
 inline void debug_print_slg46826(const slg_register_t &slgReg) {
   Serial.println();
 
@@ -1634,5 +1640,7 @@ inline void debug_print_slg46826(const slg_register_t &slgReg) {
 
   Serial.println();
 }
+
+#endif // if __cplusplus
 
 #endif
