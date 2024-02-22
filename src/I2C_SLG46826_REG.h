@@ -1372,6 +1372,10 @@ typedef struct {
   };
 } slg_register_t;
 
+#if !defined(__cplusplus)
+  static_assert(256U == sizeof(slg_register_t), "Failed sizeof slg_register_t");
+#endif
+
 #ifdef __cplusplus
 
 inline void debug_print_slg46826(const slg_register_t &slgReg) {
