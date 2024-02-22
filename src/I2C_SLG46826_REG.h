@@ -1264,13 +1264,15 @@ typedef struct {
         uint8_t reg_e1;
       };
       union {
-        uint8_t reg_e2;
-      };
-      union {
         struct {
           uint8_t : 2;                                // [E2H(0), 1809:1808]
           uint8_t write_protect_register_enable: 1;   // [E2H(2), 1810:1810]
           uint8_t : 5;                                // [E2H(3), 1815:1811]
+        };
+        uint8_t reg_e2;
+      };
+      union {
+        struct {
           uint8_t page_selection_for_erase_erseb: 5;  // [E3H(0), 1820:1816]
           uint8_t : 1;                                // [E3H(5), 1821:1821]
           uint8_t : 1;                                // [E3H(6), 1822:1822]
